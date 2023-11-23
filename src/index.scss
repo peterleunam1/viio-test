@@ -1,8 +1,10 @@
 @import 'normalize.css';
+@import 'scss/abstracts/variables';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #fefffa;
-  color: #2e2e2e;
+  background-color: color(bg);
+  color: color(text);
 }

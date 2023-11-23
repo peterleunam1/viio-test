@@ -1,0 +1,15 @@
+@import "scss/abstracts/mixins";
+
+.form {
+  width: 100%;
+
+  &__remember {
+    @include flex(row, space-between, center);
+  }
+
+  &__checkbox {
+    @include flex(row, center, center);
+    cursor: pointer;
+    gap: .3125rem;
+  }
+}

@@ -1,0 +1,18 @@
+$colors: (
+  primary: #997eb7,
+  primary-light: #e5dfef,
+  primary-dark: #7c5f9a,
+  primary-text: #654c7e,
+  bg: #fefffa,
+  text: #2e2e2e,
+  accent: #f8f7fb,
+  gray-light: #928a8a8f,
+  error: #ed4337,
+);
+
+$tablet: 768px;
+$desktop: 1024px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

@@ -1,0 +1,23 @@
+@import "scss/abstracts/mixins";
+
+.social {
+  width: 100%;
+  @include flex(column, center, center);
+
+  &__separator {
+    margin-bottom: 1rem;
+  }
+  
+  &__image {
+    width: 1.25rem;
+    height: 1.25rem;
+    object-fit: contain;
+  }
+  &__signup{
+    cursor: pointer;
+    transition: text-decoration .3s ease-in-out;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

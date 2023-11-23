@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       app: resolve(__dirname, 'src', 'app'),
+      assets: resolve(__dirname, 'src', 'assets'),
       components: resolve(__dirname, 'src', 'components'),
       constant: resolve(__dirname, 'src', 'constant'),
       context: resolve(__dirname, 'src', 'context'),
@@ -17,6 +18,7 @@ export default defineConfig({
       pages: resolve(__dirname, 'src', 'pages'),
       services: resolve(__dirname, 'src', 'services'),
       utils: resolve(__dirname, 'src', 'utils'),
+      scss: resolve(__dirname, 'src', 'scss'),
     },
   },
 })
