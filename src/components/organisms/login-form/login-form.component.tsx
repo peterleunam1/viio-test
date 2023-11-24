@@ -1,15 +1,16 @@
 import { type ChangeEvent } from 'react'
 import { Button, Input } from 'components/atoms'
 import { SocialAuth } from 'components/molecules'
-import { regexs } from 'constant'
+import { loginFields } from 'constant'
 import './login-form.styled.scss'
 
 interface LoginFormProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
   onSubmit: (event: ChangeEvent<HTMLFormElement>) => void
+  isLoading: boolean
 }
 
-export default function LoginForm ({ onChange, onSubmit }: LoginFormProps) {
+export default function LoginForm ({ onChange, onSubmit, isLoading }: LoginFormProps) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event)
   }
@@ -17,27 +18,14 @@ export default function LoginForm ({ onChange, onSubmit }: LoginFormProps) {
     event.preventDefault()
     onSubmit(event)
   }
-  const email: string = 'email'
-  const password: string = 'password'
   return (
     <>
       <form onSubmit={handleSubmit} className="form">
-        <Input
-          placeholder="your@example.com"
-          type={email}
-          name={email}
-          label={email}
-          onChange={handleChange}
-          regex={regexs.EMAIL}
-        />
-        <Input
-          placeholder="your password"
-          type={password}
-          name={password}
-          label={password}
-          onChange={handleChange}
-          regex={regexs.PASSWORD}
-        />
+        {loginFields.map((elements) => (
+          <Input key={elements.name} onChange={handleChange} {...elements}>
+            {elements.icon}
+          </Input>
+        ))}
         <div className="form__remember">
           <span className="form__checkbox">
             <input type="checkbox" />
@@ -48,6 +36,7 @@ export default function LoginForm ({ onChange, onSubmit }: LoginFormProps) {
         <Button
           variant="default"
           type="submit"
+          isLoading={isLoading}
           onClick={() => {
             console.log('click')
           }}

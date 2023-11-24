@@ -1,7 +1,7 @@
+import { type ChildrenModel } from 'models'
 import './button.styled.scss'
 
-interface ButtonProps {
-  children: React.ReactNode
+interface ButtonProps extends ChildrenModel {
   type?: 'button' | 'submit' | 'reset'
   variant: 'outline' | 'default'
   disabled?: boolean

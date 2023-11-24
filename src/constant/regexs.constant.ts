@@ -10,5 +10,13 @@ export const regexs: Regexs = {
   PASSWORD: {
     pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
     message: 'Must contain at least one uppercase letter, one lowercase letter, and one number.'
+  },
+  USERNAME: {
+    pattern: /^[a-zA-Z0-9._-]{3,}$/,
+    message: 'Must contain at least 3 characters and only letters, numbers, underscores, periods and dashes are allowed.'
+  },
+  FREE: {
+    pattern: /.*/,
+    message: ''
   }
 }
