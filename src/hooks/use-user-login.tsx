@@ -1,10 +1,11 @@
-import { type CredentialsModel } from 'models'
+import { type UserLogin, type CredentialsModel } from 'models'
 import { type ChangeEvent, useState } from 'react'
 import { postUserLogin } from 'services'
 import useNavigation from './use-navigation'
+import { privateRoutes, storageTypes } from 'constant'
+import { persistLocalStorage } from 'utils'
 
 export default function useUserLogin () {
-  const { goTo } = useNavigation()
   const [credentials, setCredentials] = useState<CredentialsModel>({
     username: '',
     password: ''
@@ -12,6 +13,7 @@ export default function useUserLogin () {
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
+  const { goTo } = useNavigation()
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setCredentials({ ...credentials, [event.target.name]: event.target.value })
@@ -23,8 +25,10 @@ export default function useUserLogin () {
       setIsLoading(true)
       const token = await postUserLogin({ crediantials: credentials })
       setIsLoading(false)
-      if (!token) setError(true)
-      else goTo('/home')
+      if (token) {
+        persistLocalStorage<UserLogin>(storageTypes.TOKEN, token)
+        goTo(`/${privateRoutes.PRIVATE}`)
+      } else setError(true)
     } catch (error: unknown) {
       console.error(error)
     }
