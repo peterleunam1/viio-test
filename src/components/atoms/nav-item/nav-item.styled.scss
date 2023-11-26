@@ -1,0 +1,61 @@
+@import "scss/abstracts/mixins";
+
+.item {
+    @include flex(row, center, center);
+    gap: .625rem;
+    cursor: pointer;
+    
+    @include tablet {
+      width: 100%;
+      padding: .3125rem 0;
+      @include flex(column, center, center);
+      gap: 0;
+      transition: background-color .3s ease-in-out;
+      &:hover{
+        background-color: color(primary-light);
+      }
+    }
+
+    &--active {
+      background-color: color(primary-light);
+      padding: .5rem .9375rem;
+      border-radius: 1.125rem;
+
+      @include tablet {
+        background-color: transparent;
+        padding: .3125rem 0;
+        border-radius: 0;
+      }
+    }
+  
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: color .3s ease-in-out;
+
+    &--active {
+      color: color(primary-dark);
+    }
+  }
+
+  &__name {
+    display: none;
+    font-size: .9rem;
+
+    @include tablet {
+      display: block;
+      margin: 0;
+      transition: color, font-weight .3s ease-in-out;
+    }
+
+    &--active {
+      display: block;
+
+      @include tablet {
+        color: color(primary-dark);
+        font-weight: 500;
+      }
+    }
+  }
+}

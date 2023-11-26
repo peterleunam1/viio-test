@@ -1,6 +1,7 @@
 export * from './auth-fields.constant'
 export * from './base-url.constant'
 export * from './initial-values.constant'
+export * from './nav-icons.constant'
 export * from './regexs.constant'
 export * from './routes.constant'
 export * from './storage-types.constant'
