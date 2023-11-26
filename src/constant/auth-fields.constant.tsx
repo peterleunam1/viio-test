@@ -1,4 +1,11 @@
-import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import {
+  EnvelopeIcon,
+  LockClosedIcon,
+  UserIcon,
+  IdentificationIcon,
+  PhoneArrowDownLeftIcon,
+  FlagIcon
+} from '@heroicons/react/24/outline'
 import { regexs } from './regexs.constant'
 
 const username: string = 'username'
@@ -11,7 +18,7 @@ export const loginFields = [
     name: username,
     label: username,
     regex: regexs.USERNAME,
-    icon: <EnvelopeIcon />
+    icon: <UserIcon />
   },
   {
     placeholder: 'your password',
@@ -30,7 +37,7 @@ export const signUpFields = [
     name: 'name',
     label: 'name',
     regex: regexs.TEXT,
-    icon: <EnvelopeIcon />
+    icon: <IdentificationIcon />
   },
   {
     placeholder: 'your last name',
@@ -38,7 +45,7 @@ export const signUpFields = [
     name: 'lastName',
     label: 'last name',
     regex: regexs.TEXT,
-    icon: <EnvelopeIcon />
+    icon: <IdentificationIcon />
   },
   {
     placeholder: 'you phone number',
@@ -46,7 +53,7 @@ export const signUpFields = [
     name: 'phone',
     label: 'phone',
     regex: regexs.NUMBERS,
-    icon: <EnvelopeIcon />
+    icon: <PhoneArrowDownLeftIcon />
   },
   {
     placeholder: 'country',
@@ -54,7 +61,7 @@ export const signUpFields = [
     name: 'city',
     label: 'country',
     regex: regexs.TEXT,
-    icon: <EnvelopeIcon />
+    icon: <FlagIcon />
   },
   {
     placeholder: 'your email',
@@ -70,7 +77,7 @@ export const signUpFields = [
     name: username,
     label: username,
     regex: regexs.USERNAME,
-    icon: <EnvelopeIcon />
+    icon: <UserIcon />
   },
   {
     placeholder: 'your password',
