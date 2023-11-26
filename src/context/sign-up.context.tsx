@@ -7,21 +7,21 @@ import {
 import { createContext, useState } from 'react'
 
 const ContextSignUp = createContext<SignUpContextProps>({
-  user: personalDataInitialValues,
+  personalData: personalDataInitialValues,
   addPersonalData () {}
 })
 
 export function SignUpContextProvider ({ children }: ChildrenModel) {
-  const [user, setUser] = useState<PersonalDataModel>(
+  const [personalData, setPersonalData] = useState<PersonalDataModel>(
     personalDataInitialValues
   )
 
   const addPersonalData = (value: PersonalDataModel) => {
-    setUser(value)
+    setPersonalData(value)
   }
 
   return (
-    <ContextSignUp.Provider value={{ user, addPersonalData }}>
+    <ContextSignUp.Provider value={{ personalData, addPersonalData }}>
       {children}
     </ContextSignUp.Provider>
   )

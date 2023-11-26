@@ -63,6 +63,6 @@ export interface RegexModel {
 }
 
 export interface SignUpContextProps {
-  user: PersonalDataModel
+  personalData: PersonalDataModel
   addPersonalData: (value: PersonalDataModel) => void
 }

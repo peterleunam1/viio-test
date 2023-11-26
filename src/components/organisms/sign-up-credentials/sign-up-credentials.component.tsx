@@ -7,7 +7,7 @@ import { SignUpMessage } from 'components/molecules'
 
 export default function SignUpCredentials () {
   const personalDataFields = signUpFields.slice(4)
-  const { user } = useGlobalPersonalData()
+  const { personalData } = useGlobalPersonalData()
   const { goTo } = useNavigation()
   const {
     credentials,
@@ -18,7 +18,7 @@ export default function SignUpCredentials () {
     showModal,
     handleCloseModal
   } = useCreateUser({
-    personalData: user
+    personalData
   })
   const { email, password, username } = credentials
   const isDisabled = !email || !password || !username
