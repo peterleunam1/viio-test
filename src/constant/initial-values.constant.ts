@@ -1,4 +1,14 @@
-import { type UserModel, type NewUserCredentialsModel, type PersonalDataModel } from 'models'
+import {
+  type UserModel,
+  type NewUserCredentialsModel,
+  type PersonalDataModel,
+  type CredentialsModel
+} from 'models'
+
+export const credentiaslInitialValues: CredentialsModel = {
+  username: '',
+  password: ''
+}
 
 export const personalDataInitialValues: PersonalDataModel = {
   name: '',
@@ -6,6 +16,7 @@ export const personalDataInitialValues: PersonalDataModel = {
   phone: 0,
   city: ''
 }
+
 export const newUserCredentialsInitialValues: NewUserCredentialsModel = {
   email: '',
   password: '',

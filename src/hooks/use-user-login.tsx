@@ -2,14 +2,11 @@ import { type UserLogin, type CredentialsModel } from 'models'
 import { type ChangeEvent, useState } from 'react'
 import { postUserLogin } from 'services'
 import useNavigation from './use-navigation'
-import { privateRoutes, storageTypes } from 'constant'
+import { credentiaslInitialValues, privateRoutes, storageTypes } from 'constant'
 import { persistLocalStorage } from 'utils'
 
 export default function useUserLogin () {
-  const [credentials, setCredentials] = useState<CredentialsModel>({
-    username: '',
-    password: ''
-  })
+  const [credentials, setCredentials] = useState<CredentialsModel>(credentiaslInitialValues)
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
