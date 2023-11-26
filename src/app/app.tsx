@@ -1,10 +1,13 @@
 import { Suspense } from 'react'
 import { Router } from '../router'
+import { SignUpContextProvider } from 'context'
 
 function App () {
   return (
     <Suspense fallback={<p>Loading...</p>}>
-      <Router />
+      <SignUpContextProvider>
+        <Router />
+      </SignUpContextProvider>
     </Suspense>
   )
 }

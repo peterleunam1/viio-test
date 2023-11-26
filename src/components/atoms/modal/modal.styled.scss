@@ -1,0 +1,44 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flex(row, center, center);
+  z-index: 9;
+  background: color(overlay);
+}
+
+.containerModal {
+  width: 80%;
+  height: auto;
+  background: color(bg);
+  position: relative;
+  border-radius: 0.9375rem;
+  box-shadow: $bshadow;
+  padding: 1.25rem;
+  @include flex(column, center, center);
+
+  @include tablet {
+    width: 45%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+    @include flex(row, center, center);
+    
+    &:hover {
+      scale: 1.15;
+    }
+  }
+}

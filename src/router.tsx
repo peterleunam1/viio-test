@@ -5,6 +5,8 @@ import { privateRoutes, publicRoutes } from 'constant'
 import { AuthGuard } from 'guards'
 
 const Login = lazy(async () => await import('./pages/public/login/login'))
+const SignUp = lazy(async () => await import('./pages/public/sign-up/sign-up'))
+const SignUpConfirm = lazy(async () => await import('./pages/public/sign-up-confirm/sign-up-confirm'))
 const Private = lazy(async () => await import('./pages/private/private'))
 
 export const Router = () => {
@@ -16,6 +18,8 @@ export const Router = () => {
           element={<Navigate to={privateRoutes.PRIVATE} />}
         />
         <Route path={publicRoutes.LOGIN} element={<Login />} />
+        <Route path={publicRoutes.SIGNUP} element={<SignUp />} />
+        <Route path={publicRoutes.SIGNUPCREDENTIALS} element={<SignUpConfirm />} />
         <Route element={<AuthGuard />}>
           <Route path={`${privateRoutes.PRIVATE}/*`} element={<Private />} />
         </Route>

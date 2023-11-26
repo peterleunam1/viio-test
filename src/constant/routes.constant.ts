@@ -1,6 +1,7 @@
 export const publicRoutes = {
   LOGIN: 'log-in',
-  REGISTER: 'sign-up'
+  SIGNUP: 'sign-up',
+  SIGNUPCREDENTIALS: 'sign-up-credentials'
 }
 export const privateRoutes = {
   PRIVATE: 'private',

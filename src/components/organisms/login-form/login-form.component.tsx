@@ -37,9 +37,7 @@ export default function LoginForm ({ onChange, onSubmit, isLoading }: LoginFormP
           variant="default"
           type="submit"
           isLoading={isLoading}
-          onClick={() => {
-            console.log('click')
-          }}
+          onClick={() => {}}
         >
           Log In
         </Button>

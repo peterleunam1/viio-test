@@ -2,10 +2,13 @@
 
 .social {
   width: 100%;
+  margin-top: 0.8rem;
   @include flex(column, center, center);
 
-  &__separator {
-    margin-bottom: 1rem;
+  &__text {
+    @include desktop {
+      margin: 0px;
+    }
   }
   
   &__image {
@@ -13,6 +16,7 @@
     height: 1.25rem;
     object-fit: contain;
   }
+  
   &__signup{
     cursor: pointer;
     transition: text-decoration .3s ease-in-out;

@@ -1,0 +1,26 @@
+@import "scss/abstracts/variables";
+@import "scss/abstracts/mixins";
+.message {
+  &__title {
+    color: color(primary);
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: color(primary-text);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button{
+    width: 100%;
+    @include desktop {
+      width: 30%;
+      margin: 0 auto;
+    }
+  }
+}
