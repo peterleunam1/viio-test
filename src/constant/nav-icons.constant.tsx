@@ -5,31 +5,38 @@ import {
   HeartIcon,
   UserIcon
 } from '@heroicons/react/24/outline'
+import { privateRoutes } from './routes.constant'
 
 interface NavIcon {
   icon: JSX.Element
   name: string
+  path: string
 }
 
 export const navIcons: NavIcon[] = [
   {
     icon: <HomeIcon />,
-    name: 'home'
+    name: 'home',
+    path: privateRoutes.HOME
   },
   {
     icon: <MagnifyingGlassIcon />,
-    name: 'search'
+    name: 'search',
+    path: privateRoutes.SEARCH
   },
   {
     icon: <ShoppingCartIcon />,
-    name: 'cart'
+    name: 'cart',
+    path: ''
   },
   {
     icon: <HeartIcon />,
-    name: 'favorites'
+    name: 'favorites',
+    path: ''
   },
   {
     icon: <UserIcon />,
-    name: 'profile'
+    name: 'profile',
+    path: ''
   }
 ]

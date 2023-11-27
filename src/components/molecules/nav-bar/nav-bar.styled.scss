@@ -38,8 +38,10 @@
 
   &__logo {
     display: none;
+    
     @include tablet {
       display: block;
+      cursor: pointer;
       margin: 0;
     }
   }
@@ -48,9 +50,14 @@
     display: none;
     width: 1.5rem;
     height: 1.5rem;
+    transition: scale .3s ease-in-out;
 
     @include tablet {
       display: block;
+      cursor: pointer;
+      &:hover{
+        scale: 1.1;
+      }
     }
   }
 }
