@@ -5,5 +5,7 @@ export const publicRoutes = {
 }
 export const privateRoutes = {
   PRIVATE: 'private',
-  HOME: '/'
+  HOME: '/',
+  SEARCH: 'search',
+  SEARCH_DATA: 'search/:query'
 }

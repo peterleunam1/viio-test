@@ -1,0 +1,18 @@
+@import "scss/abstracts/mixins";
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: .9375rem;
+
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3.2rem;
+  }
+}

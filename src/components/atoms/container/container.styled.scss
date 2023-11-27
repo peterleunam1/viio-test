@@ -1,0 +1,9 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.general-container {
+  width: $width-container;
+  @include flex(column, center, flex-start);
+  margin: 1.5625rem auto;
+
+}

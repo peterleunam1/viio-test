@@ -1,0 +1,22 @@
+@import "scss/abstracts/mixins";
+
+.app-container {
+  width: 100%;
+  overflow: hidden;
+  @include flex(column, center, center);
+
+  @include tablet {
+    align-items: flex-end;
+  }
+
+  &__content {
+    width: 100%;
+    padding-bottom: 3.125rem;
+    
+    @include tablet {
+      width: calc(100% - 5.625rem);
+      padding-bottom: 0;
+      justify-content: flex-end;
+    }
+  }
+}

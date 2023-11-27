@@ -1,0 +1,24 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.home-header {
+  width: $width-container;
+  @include flex(row, space-between, center);
+  margin: 0 auto;
+  padding: .8rem 0;
+
+  @include tablet {
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+
+  &__title {
+    @include tablet {
+      display: none;
+    }
+  }
+}

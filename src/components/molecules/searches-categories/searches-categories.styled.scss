@@ -1,0 +1,25 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.list-searches {
+    @include flex(row, space-between, center);
+    list-style: none;
+    width: $width-container;
+    padding: 0 1.25rem .3125rem 1.25rem;
+    margin: 0;
+    border-bottom: .0625rem solid color(primary-light);
+  
+    &__item {
+      cursor: pointer;
+      transition: font-weight .3s ease-in-out;
+  
+      &:hover {
+        font-weight: bold;
+      }
+  
+      &--active {
+        font-weight: bold;
+      }
+    }
+  }
+  

@@ -1,0 +1,19 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.search-header {
+  @include flex(row, space-between, center);
+  width: $width-container;
+  margin: 0 auto;
+
+  &__form {
+    width: 75%;
+    margin-top: 0.8rem;
+    @include tablet {
+      width: 90%;
+    }
+  }
+}
+
+
+
