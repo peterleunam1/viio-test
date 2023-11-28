@@ -1,4 +1,6 @@
 export * from './auth-header'
+export * from './details-from-product'
+export * from './details-from-product'
 export * from './home-header'
 export * from './nav-bar'
 export * from './product'

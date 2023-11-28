@@ -37,3 +37,16 @@ export const userInitialValues: UserModel = {
   },
   phone: ''
 }
+
+export const productInitialValues = {
+  id: 0,
+  title: '',
+  price: 0,
+  image: '',
+  description: '',
+  category: '',
+  rating: {
+    rate: 0,
+    count: 0
+  }
+}

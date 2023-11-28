@@ -1,0 +1,26 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.variation-container {
+  @include flex(column, center, center);
+  width: 100%;
+  gap: 1rem;
+  margin: 1.875rem 0;
+
+  &__header {
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+  &__content {
+    @include flex(row, flex-start, center);
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  &__circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: color(primary);
+  }
+}

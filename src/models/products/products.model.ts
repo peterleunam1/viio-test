@@ -1,5 +1,5 @@
 export interface ProductModel {
-  category: Category
+  category: string
   description: string
   id: number
   image: string
@@ -7,15 +7,11 @@ export interface ProductModel {
   rating: Rating
   title: string
 }
-
-export enum Category {
-  Electronics = 'electronics',
-  Jewelery = 'jewelery',
-  MenSClothing = "men's clothing",
-  WomenSClothing = "women's clothing",
-}
-
 export interface Rating {
   count: number
   rate: number
+}
+
+export interface GetSingleProductParams {
+  id: string
 }

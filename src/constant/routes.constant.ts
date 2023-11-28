@@ -7,5 +7,6 @@ export const privateRoutes = {
   PRIVATE: 'private',
   HOME: '/',
   SEARCH: 'search',
-  SEARCH_DATA: 'search/:query'
+  SEARCH_DATA: 'search/:query',
+  PRODUCT_DETAILS: 'product-details/:id'
 }

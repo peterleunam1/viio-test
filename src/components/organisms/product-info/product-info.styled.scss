@@ -1,0 +1,42 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.container-detail {
+  @include flex(column, center, center);
+  margin: 0;
+  
+  @include tablet {
+    width: 100%;
+    height: 92vh;
+    padding: 0;
+    @include flex(row, center, center);
+    gap: 3.125rem;
+  }
+  
+  &__container-image {
+    width: 100%;
+    max-width: calc(100% - 3.125rem);
+    height: 30vh;
+    margin-top: 1.875rem;
+    
+    @include tablet {
+      width: max-content;
+      height: max-content;
+      max-width: 500px;
+      padding: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;
+
+    @include tablet {
+      width: 100%;
+      height: 60vh;
+      padding: 0;
+    }
+  }
+}
