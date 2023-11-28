@@ -1,6 +1,14 @@
 @import "scss/abstracts/variables";
 @import "scss/abstracts/mixins";
 .message {
+
+  .alert{
+    position: absolute;
+    top: -50;
+    right: 0;
+    width: 35%;
+    z-index: 9;    
+  }
   &__title {
     color: color(primary);
     text-align: center;

@@ -1,18 +1,27 @@
 import { BASE_URL, publicRoutes } from 'constant'
 import './sign-up-message.styled.scss'
-import { Button } from 'components/atoms'
+import { Alert, Button } from 'components/atoms'
 import { useNavigation } from 'hooks'
+import { useState } from 'react'
 
 export default function SignUpMessage () {
   const { goTo } = useNavigation()
-
+  const [success, setSuccess] = useState(false)
   const URL: string = BASE_URL + 'docs'
 
   const handleRedirectToLogin = () => {
-    goTo(`/${publicRoutes.LOGIN}`)
+    setSuccess(true)
+    setTimeout(() => {
+      goTo(`/${publicRoutes.LOGIN}`)
+      setSuccess(false)
+    }, 2000)
   }
 
   return (
+   <>
+   {success && <div className='message__alert'>
+    <Alert type="success" message="Log In exitoso" />
+   </div>}
     <article>
       <h3 className="message__title">Log In exitoso</h3>
       <p>
@@ -41,5 +50,6 @@ export default function SignUpMessage () {
         </Button>
       </div>
     </article>
+    </>
   )
 }
