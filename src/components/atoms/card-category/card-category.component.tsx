@@ -1,3 +1,4 @@
+import { getCapitalize } from 'utils'
 import './card-category.styled.scss'
 
 interface CardCategoryProps {
@@ -5,7 +6,6 @@ interface CardCategoryProps {
 }
 
 export default function CardCategory ({ text }: CardCategoryProps) {
-  return (
-    <article className="card-tag">{text}</article>
-  )
+  const textCapitalized = getCapitalize(text)
+  return <article className="card-tag">{textCapitalized}</article>
 }

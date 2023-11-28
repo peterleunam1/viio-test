@@ -7,7 +7,7 @@ import { SkeletonDetails, SkeletonProducts } from 'components/molecules'
 
 export default function ProductDetail () {
   const id = useParams<{ id: string }>().id ?? '0'
-  const { product, loading } = useSingleProduct({ id })
+  const { product, loading, error } = useSingleProduct({ id })
   const { products, loading: laod } = useProducts()
 
   const relatedProducts: ProductModel[] = products.filter(
@@ -15,7 +15,7 @@ export default function ProductDetail () {
   )
   return (
     <AppLayout>
-      {loading ? <SkeletonDetails /> : <ProductInfo product={product} />}
+      {loading ? <SkeletonDetails /> : error ? <p>Error</p> : <ProductInfo product={product} />}
       {laod && <SkeletonProducts />}
       <ListOfProducts products={relatedProducts} label="Related Products" />
     </AppLayout>
