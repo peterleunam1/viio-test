@@ -14,9 +14,9 @@ export default function Modal ({ children, status, onClose }: ModalProps) {
       {status && (
         <div className="overlay">
           <div className="containerModal">
-            <article className="containerModal__close" onClick={handleClose}>
-                <XMarkIcon/>
-            </article>
+            <button className="containerModal__close" onClick={handleClose}>
+                <XMarkIcon className='containerModal__icon'/>
+            </button>
             {children}
           </div>
         </div>
