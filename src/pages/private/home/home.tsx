@@ -1,4 +1,4 @@
-import { HomeHeader } from 'components/molecules'
+import { HomeHeader, SkeletonProducts } from 'components/molecules'
 import { SliderPerView } from 'components/molecules/slider-per-view'
 import { ListOfProducts, Slider } from 'components/organisms'
 import { AppLayout } from 'components/templates'
@@ -22,7 +22,7 @@ export default function Home () {
       <Slider images={banners} />
       <SliderPerView type='image'values={images} title='Room Ideas'/>
       <SliderPerView type='text'values={texts} title='Shop By Room'/>
-      {loading && <p>Loading...</p>}
+      {loading && <SkeletonProducts />}
       {error && <p>Error</p>}
      <ListOfProducts products={recommendedProducts} label='Recommended for you'/>
     </AppLayout>

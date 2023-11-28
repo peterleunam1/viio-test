@@ -9,12 +9,22 @@ $colors: (
   gray-light: #928a8a8f,
   error: #ed4337,
   overlay: rgba(0, 0, 0, 0.5),
+  skeleton: #f6f7f8,
+  skeletonGradient:
+    linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 20%,
+      #f6f7f8 40%,
+      #f6f7f8 100%
+    ),
 );
 
 $tablet: 768px;
 $desktop: 1024px;
 $bshadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-$bshadowalternate: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$bshadowalternate: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+  0 1px 2px 0 rgba(0, 0, 0, 0.1);
 $width-container: calc(100% - 40px);
 
 @function color($color-name) {
