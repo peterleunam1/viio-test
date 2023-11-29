@@ -1,15 +1,15 @@
 @import "scss/abstracts/mixins";
 
 .product {
-  width: 100%;
+  width: 150px;
   height: auto;
   position: relative;
   transition: scale .4s ease-in-out;
   cursor: pointer;
-  background-color: blue;
   
   @include tablet {
     width: max-content;
+    max-width: 13.125rem;
   }
 
   &:hover {
@@ -23,11 +23,12 @@
   }
 
   &__img {
-    max-width: 9.375rem;
+    width: 150px;
     max-height: 11.25rem;
     border-radius: 0.5rem;
 
     @include tablet {
+      width: 100%;
       max-width: 11.5625rem;
       max-height: 13.125rem;
     }

@@ -5,6 +5,8 @@
 
   &__remember {
     @include flex(row, space-between, center);
+    font-size: .9375rem;
+    margin-bottom: .625rem
   }
 
   &__checkbox {
