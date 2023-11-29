@@ -1,12 +1,16 @@
 @import "scss/abstracts/mixins";
 
 .product {
-  width: max-content;
+  width: 100%;
   height: auto;
   position: relative;
-  max-width: 13.125rem;
   transition: scale .4s ease-in-out;
   cursor: pointer;
+  background-color: blue;
+  
+  @include tablet {
+    width: max-content;
+  }
 
   &:hover {
     scale: 1.05;
@@ -36,13 +40,13 @@
 
   &__info {
     @include flex(column, center, flex-start);
+    width: 100%;
   }
 
   &__text {
     font-size: 1rem;
     text-align: left;
     width: 100%;
-    max-width: 150px;
     line-height: 1rem;
     margin: 0.125rem;
 
