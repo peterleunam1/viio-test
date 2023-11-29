@@ -1,14 +1,14 @@
 @import "scss/abstracts/mixins";
 
 .product {
-  width: 150px;
+  width: 46.5%;
   height: auto;
   position: relative;
   transition: scale .4s ease-in-out;
   cursor: pointer;
-  
+
   @include tablet {
-    width: max-content;
+    width: 20%;
     max-width: 13.125rem;
   }
 
@@ -23,13 +23,13 @@
   }
 
   &__img {
-    width: 150px;
+    width: 100%;
     max-height: 11.25rem;
     border-radius: 0.5rem;
 
     @include tablet {
       width: 100%;
-      max-width: 11.5625rem;
+      max-width: 13rem;
       max-height: 13.125rem;
     }
 
@@ -49,7 +49,7 @@
     text-align: left;
     width: 100%;
     line-height: 1rem;
-    margin: 0.125rem;
+    margin: 0.125rem 0px;
 
     @include tablet {
       max-width: 11.5625rem;
@@ -63,11 +63,11 @@
   &__icon {
     position: absolute;
     top: 0.5rem;
-    right: 0.5rem;
+    right: 1.25rem;
     width: 1.5625rem;
     height: 1.5625rem;
     background-color: color(primary);
-    padding: 8px;
+    padding: .5rem;
     border-radius: 50%;
     color: color(bg);
   }

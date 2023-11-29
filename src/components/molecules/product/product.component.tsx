@@ -17,7 +17,7 @@ export default function Product ({ id, name, price, image }: ProductProps) {
 
   return (
     <article className="product" onClick={handleRedirect}>
-        <span className='product__icon' > <HeartIcon /></span>
+      <span className='product__icon' > <HeartIcon /></span>
       <picture className="product__container-img">
         <img src={image} alt={`${id}-${name}`} className='product__img' loading='lazy'/>
       </picture>
