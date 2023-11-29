@@ -1,0 +1,16 @@
+@import "scss/abstracts/mixins";
+
+.slider {
+  width: 100%;
+  height: 30vh;
+  margin: 1rem 0;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include tablet {
+    height: 85vh;
+    margin: 0;
+  }
+}

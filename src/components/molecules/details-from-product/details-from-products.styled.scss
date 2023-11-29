@@ -1,0 +1,85 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.info-container {
+  @include flex(column, center, flex-start);
+  width: $width-container;
+  margin: 1.5625rem auto;
+
+  @include tablet {
+    width: 40%;
+    margin: 0;
+  }
+
+  &__detail-title {
+    margin: 0.625rem 0 0.9375rem 0;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.75rem;
+      left: 0;
+      width: 7.5rem;
+      height: 0.3125rem;
+      background-color: color(primary);
+      border-radius: 0.625rem;
+
+      @include tablet {
+        width: 12.5rem;
+      }
+    }
+  }
+
+  &__price-container {
+    @include flex(row, center, center);
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__price-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__price-desc {
+    @include flex(row, center, center);
+    text-transform: uppercase;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.625rem;
+    font-weight: 500;
+    margin: 0;
+    background-color: color(primary-light);
+    gap: 0.3125rem;
+  }
+
+  &__price-dashed {
+    text-decoration: line-through;
+    color: gray;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__rate {
+    @include flex(row, space-between, center);
+    width: 100%;
+    margin-top: 0.625rem;
+  }
+
+  &__rate-star {
+    @include flex(row, flex-start, center);
+    gap: 0.625rem;
+  }
+
+  &__rate-star-p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__description {
+    margin: 0;
+  }
+}

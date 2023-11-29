@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# VIIO TEST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+- [Demo user](#demo-user)
+- [Built With](#built-with)
+- [Features](#features)
+- [Instructions](#instructions)
+- [How to Use](#how-to-use)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+![Auth](./src/assets/images/Diapositiva1.PNG)
+![Home](./src/assets/images/Diapositiva2.PNG)
+![Search](./src/assets/images/Diapositiva3.PNG)
 
-## Expanding the ESLint configuration
+## Demo user
+- username: johnd
+- password: m38rmF$
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Built With
 
-- Configure the top-level `parserOptions` property like this:
+- [React JS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Router Dom](https://reactrouter.com/en/main)
+- [SASS](https://sass-lang.com/)
+- [Hero Icons](https://heroicons.com/)
+- [Swiper](https://swiperjs.com/)
+- [Data: Fake Store API](https://fakestoreapi.com/)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Features
+- Log In
+- Sign Up
+- Home
+- Search
+- Product Detail
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Instructions
+1. **Prerequisites**
+   - Ensure that you have Node.js installed on your computer. You can download it from [here](https://nodejs.org/es/).
+   - Ensure that you have Git installed on your computer. You can download it from [here](https://git-scm.com/downloads).
+
+## How to Use
+
+   ```bash
+   # Clone this repository
+   $ git clone https://github.com/peterleunam1/viio-test
+
+   # Install dependencies
+   $ npm install 
+
+   # Run app
+   $ npm run dev 
+
+   # Run tests
+   $ npm run test
+
+   # Build app
+   $ npm run build
+   $ npm run start
+   ```
+
+

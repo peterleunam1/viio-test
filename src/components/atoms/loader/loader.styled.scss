@@ -1,0 +1,44 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.loader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  @include flex(column, center, center);
+  z-index: 9999;
+
+  .load {
+    width: 3.125rem;
+    aspect-ratio: 1;
+    --c: no-repeat radial-gradient(farthest-side, color(primary) 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 0.625rem 0.625rem;
+    animation: l18 1s infinite;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: 0.1875rem;
+      background: repeating-conic-gradient(
+        #0000 0 35deg,
+        color(primary) 0 90deg
+      );
+      -webkit-mask: radial-gradient(
+        farthest-side,
+        #0000 calc(100% - 0.1875rem),
+        #000 0
+      );
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes l18 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}

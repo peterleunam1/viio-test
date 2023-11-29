@@ -1,0 +1,33 @@
+$colors: (
+  primary: #997eb7,
+  primary-light: #e5dfef,
+  primary-dark: #7c5f9a,
+  primary-text: #654c7e,
+  bg: #fefffa,
+  text: #2e2e2e,
+  accent: #f8f7fb,
+  gray-light: #928a8a8f,
+  overlay: rgba(0, 0, 0, 0.5),
+  success: #a2d4ab,
+  error: #ef9a9a,
+  skeleton: #f6f7f8,
+  skeletonGradient:
+    linear-gradient(
+      to right,
+      #f6f7f8 0%,
+      #edeef1 20%,
+      #f6f7f8 40%,
+      #f6f7f8 100%
+    ),
+);
+
+$tablet: 768px;
+$desktop: 1024px;
+$bshadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$bshadowalternate: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+  0 1px 2px 0 rgba(0, 0, 0, 0.1);
+$width-container: calc(100% - 40px);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

@@ -1,0 +1,6 @@
+export * from './list-of-product'
+export * from './login-form'
+export * from './product-info'
+export * from './sign-up-credentials'
+export * from './sign-up-personal-date'
+export * from './slider'

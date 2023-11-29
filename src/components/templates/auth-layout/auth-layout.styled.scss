@@ -1,0 +1,26 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.main {
+  width: 100%;
+  max-width: 90rem;
+
+  &__section {
+    width: 90%;
+    margin: 0 auto;
+    @include flex(column, center, center);
+    gap: 1rem;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 30%;
+      padding: 2.5rem;
+      border-radius: 18px;
+      gap:0;
+      border: 1px solid color(primary-light);
+    }
+  }
+}

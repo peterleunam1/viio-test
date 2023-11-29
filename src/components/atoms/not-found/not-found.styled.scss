@@ -1,0 +1,16 @@
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+.not-found {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 100vh;
+
+  &__return{
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    &:hover{
+      color: color(primary);
+    }
+  }
+}
