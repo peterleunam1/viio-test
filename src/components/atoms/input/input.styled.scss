@@ -34,7 +34,8 @@
 
   &__icon {
     width: 1.375rem;
-    @include flex(row, center, center);
+    height: 1.375rem;
+    @include flex(row, center, unset);
     color: color(primary-text);
   }
   

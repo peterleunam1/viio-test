@@ -7,11 +7,21 @@ import {
   FlagIcon
 } from '@heroicons/react/24/outline'
 import { regexs } from './regexs.constant'
+import { type RegexModel } from 'models'
 
 const username: string = 'username'
 const password: string = 'password'
 
-export const loginFields = [
+interface FieldsModel {
+  placeholder: string
+  type: string
+  name: string
+  label: string
+  regex: RegexModel
+  icon: JSX.Element
+}
+
+export const loginFields: FieldsModel[] = [
   {
     placeholder: 'your username',
     type: username,
@@ -30,7 +40,7 @@ export const loginFields = [
   }
 ]
 
-export const signUpFields = [
+export const signUpFields: FieldsModel[] = [
   {
     placeholder: 'your name',
     type: 'text',

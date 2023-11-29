@@ -8,9 +8,7 @@ interface DetailsFromProductProps {
   product: ProductModel
 }
 
-export default function DetailsFromProduct ({
-  product
-}: DetailsFromProductProps) {
+export default function DetailsFromProduct ({ product }: DetailsFromProductProps) {
   return (
     <article className="info-container">
       <h2 className="info-container__detail-title">{product.title}</h2>

@@ -4,6 +4,7 @@
   &__image {
     width: calc(100% - 3.125rem);
     height: 30vh;
+
     @include tablet {
       width: 30%;
       height: 60vh;
@@ -14,6 +15,7 @@
   &__info {
     width: calc(100% - 3.125rem);
     padding: 0 1.875rem;
+
     @include tablet {
       width: 40%;
       height: 60vh;
@@ -26,6 +28,7 @@
     height: 1.8rem;
     margin-top: 1.875rem;
     margin-bottom: 3rem;
+
     @include tablet {
       height: 2.5rem;
       width: 100%;
@@ -37,6 +40,7 @@
     width: 100%;
     height: 1rem;
     margin: 1rem 0;
+    
     @include tablet {
       height: 1.5rem;
       width: 100%;

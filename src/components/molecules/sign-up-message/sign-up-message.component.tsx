@@ -1,4 +1,4 @@
-import { BASE_URL, publicRoutes } from 'constant'
+import { Alerts, BASE_URL, publicRoutes } from 'constant'
 import './sign-up-message.styled.scss'
 import { Alert, Button } from 'components/atoms'
 import { useNavigation } from 'hooks'
@@ -20,7 +20,7 @@ export default function SignUpMessage () {
   return (
    <>
    {success && <div className='message__alert'>
-    <Alert type="success" message="Log In exitoso" />
+    <Alert type="success" message={Alerts.SUCCESS}/>
    </div>}
     <article>
       <h3 className="message__title">Log In exitoso</h3>

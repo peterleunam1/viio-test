@@ -11,7 +11,7 @@ interface NavItemProps extends ChildrenModel {
 
 export default function NavItem ({ children, name, path }: NavItemProps) {
   const { goTo } = useNavigation()
-  let ubication = window.location.pathname.split('/')[2]
+  let ubication: string = window.location.pathname.split('/')[2]
 
   if (ubication === undefined) ubication = 'home'
   const nameCapitalized = getCapitalize(name)

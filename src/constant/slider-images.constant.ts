@@ -25,7 +25,7 @@ export const roomIdeas: string[] = [
   IDEA_SIX,
   IDEA_SEVEN
 ]
-export const categoriesTag = [
+export const categoriesTag: string [] = [
   'living Room',
   'bedroom',
   'bathroom',

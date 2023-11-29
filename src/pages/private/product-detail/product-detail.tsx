@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useProducts, useSingleProduct } from 'hooks'
 import { type ProductModel } from 'models'
 import { SkeletonDetails, SkeletonProducts } from 'components/molecules'
+import { Alerts } from 'constant'
 
 export default function ProductDetail () {
   const id = useParams<{ id: string }>().id ?? '0'
@@ -15,7 +16,7 @@ export default function ProductDetail () {
   )
   return (
     <AppLayout>
-      {loading ? <SkeletonDetails /> : error ? <p>Error</p> : <ProductInfo product={product} />}
+      {loading ? <SkeletonDetails /> : error ? <p>{Alerts.ERROR}</p> : <ProductInfo product={product} />}
       {laod && <SkeletonProducts />}
       <ListOfProducts products={relatedProducts} label="Related Products" />
     </AppLayout>

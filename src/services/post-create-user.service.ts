@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { BASE_URL } from 'constant'
+import { Alerts, BASE_URL } from 'constant'
 import { type CredentialsToSignUp, type SingUpReturnedData } from 'models'
 
 const postCreateUser = async ({ crediantials }: CredentialsToSignUp): Promise<SingUpReturnedData> => {
@@ -10,7 +10,7 @@ const postCreateUser = async ({ crediantials }: CredentialsToSignUp): Promise<Si
   }
   return await axios.request(options).then(function (response) {
     if (response.status !== 200) {
-      throw new Error('Error')
+      throw new Error(Alerts.ERROR)
     } else {
       return response.data
     }

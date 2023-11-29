@@ -1,6 +1,6 @@
 import { type ChangeEvent } from 'react'
 import { Alert, Button, Input, Modal } from 'components/atoms'
-import { publicRoutes, signUpFields } from 'constant'
+import { Alerts, publicRoutes, signUpFields } from 'constant'
 import './sign-up-credentials.styled.scss'
 import { useCreateUser, useGlobalPersonalData, useNavigation } from 'hooks'
 import { SignUpMessage } from 'components/molecules'
@@ -40,7 +40,7 @@ export default function SignUpCredentials () {
 
   return (
     <>
-      {error && <Alert type='error' message='Error during registration' />}
+      {error && <Alert type='error' message={Alerts.ERROR} />}
       <form className="formCredentials" onSubmit={handleSubmit}>
         {personalDataFields.map((elements) => (
           <Input key={elements.name} onChange={handleChange} {...elements}>

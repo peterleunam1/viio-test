@@ -8,7 +8,7 @@ interface ProductInfoProps {
 }
 
 export default function ProductInfo ({ product }: ProductInfoProps) {
-  const { image, title } = product ?? {}
+  const { image, title } = product
   return (
     <section className="container-detail">
       <picture className="container-detail__container-image">
@@ -16,6 +16,7 @@ export default function ProductInfo ({ product }: ProductInfoProps) {
           src={image}
           alt={title}
           className="container-detail__image"
+          loading='lazy'
         />
       </picture>
       <DetailsFromProduct product={product} />

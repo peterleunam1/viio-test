@@ -6,6 +6,6 @@ interface CardCategoryProps {
 }
 
 export default function CardCategory ({ text }: CardCategoryProps) {
-  const textCapitalized = getCapitalize(text)
+  const textCapitalized: string = getCapitalize(text)
   return <article className="card-tag">{textCapitalized}</article>
 }

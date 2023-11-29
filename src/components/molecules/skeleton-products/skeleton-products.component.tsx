@@ -5,7 +5,7 @@ export default function SkeletonProducts () {
   return (
     <div className="products">
       {[...Array(5)].map((_, index) => (
-        <div style={{ width: '170px', height: '170px' }} key={index}>
+        <div className='skeleton-product' key={index}>
           <Skeleton />
         </div>
       ))}

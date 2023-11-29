@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { BASE_URL, storageTypes } from 'constant'
+import { Alerts, BASE_URL, storageTypes } from 'constant'
 import { type GetSingleProductParams, type ProductModel } from 'models'
 import { getLocalStorage } from 'utils'
 
@@ -14,7 +14,7 @@ const getSingleProducts = async ({ id }: GetSingleProductParams): Promise<Produc
   }
   return await axios.request(options).then(function (response) {
     if (response.status !== 200) {
-      throw new Error('Error')
+      throw new Error(Alerts.ERROR)
     } else {
       return response.data
     }

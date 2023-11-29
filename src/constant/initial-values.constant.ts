@@ -2,7 +2,8 @@ import {
   type UserModel,
   type NewUserCredentialsModel,
   type PersonalDataModel,
-  type CredentialsModel
+  type CredentialsModel,
+  type ProductModel
 } from 'models'
 
 export const credentiaslInitialValues: CredentialsModel = {
@@ -38,7 +39,7 @@ export const userInitialValues: UserModel = {
   phone: ''
 }
 
-export const productInitialValues = {
+export const productInitialValues: ProductModel = {
   id: 0,
   title: '',
   price: 0,

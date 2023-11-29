@@ -10,7 +10,7 @@ export interface ButtonProps extends ChildrenModel {
 }
 
 export default function Button ({ children, onClick, type = 'button', disabled = false, isLoading = false, variant }: ButtonProps) {
-  const className = isLoading
+  const className: string = isLoading
     ? 'button button--loading'
     : `button button--${variant}`
 

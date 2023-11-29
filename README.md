@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Demo user](#default-user)
+- [Demo user](#demo-user)
 - [Built With](#built-with)
 - [Features](#features)
 - [Instructions](#instructions)
@@ -26,6 +26,7 @@
 - [SASS](https://sass-lang.com/)
 - [Hero Icons](https://heroicons.com/)
 - [Swiper](https://swiperjs.com/)
+- [Data: Fake Store API](https://fakestoreapi.com/)
 
 ## Features
 - Log In
@@ -36,7 +37,7 @@
 
 ## Instructions
 1. **Prerequisites**
-   - Ensure that you have Node.js installed on your computer. You can download it from [here] (https://nodejs.org/es/).
+   - Ensure that you have Node.js installed on your computer. You can download it from [here](https://nodejs.org/es/).
    - Ensure that you have Git installed on your computer. You can download it from [here](https://git-scm.com/downloads).
 
 ## How to Use
@@ -44,6 +45,7 @@
    ```bash
    # Clone this repository
    $ git clone https://github.com/peterleunam1/viio-test
+
    # Install dependencies
    $ npm install 
 
